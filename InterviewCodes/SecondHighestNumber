@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+public class SecondHighestNumber {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(5, 9, 11, 2, 8, 23, 1);
+        Integer secondHigest = numbers.stream()
+                .distinct() //remove duplicate
+                .sorted(Comparator.reverseOrder()) //sort descending order
+                .skip(1)  //skip the highest element
+                .findFirst()// take the next one
+                .orElse(null);
+        System.out.println("Second Highest Number: " + secondHigest);
+    }
+}
