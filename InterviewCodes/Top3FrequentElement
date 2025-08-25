@@ -13,8 +13,8 @@ public class Top3FrequentElement {
                 ))
                 .entrySet()
                 .stream()
-                .sorted((a, b)->Long.compare(b.getValue(),a.getValue()))
-                .limit(3)
+                .sorted((a, b)->Long.compare(b.getValue(),a.getValue())) // sort desc by frequency
+                .limit(3) // pick top 3
                 .forEach(entry ->System.out.println(entry.getKey()+ " = " +entry.getValue()));
     }
 }
