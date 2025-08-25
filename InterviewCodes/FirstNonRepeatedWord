@@ -5,6 +5,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class FirstNonRepeatedWord {
+
     public static void main(String[] args) {
         String sentence = "Java is great and Java is Powerful";
         String result = Arrays.stream(sentence.split(" "))
