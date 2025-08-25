@@ -11,6 +11,6 @@ public class SecondHighestNumber {
                 .skip(1)  //skip the highest element
                 .findFirst()// take the next one
                 .orElse(null);
-        System.out.println("Second Highest Number: " + secondHigest);
+        System.out.println("Second Highest Number: " + secondHigest); // output:11
     }
 }
