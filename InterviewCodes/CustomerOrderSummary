@@ -19,7 +19,7 @@ class Order
         return amount;
     }
 }
-public class Day1Java8Challenge {
+public class CustomerOrderSummary  {
     public static void main(String[] args) {
         List<Order> orders= Arrays.asList(
                 new Order("Amit", 50),
