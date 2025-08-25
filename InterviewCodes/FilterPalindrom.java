@@ -8,7 +8,8 @@ import java.util.stream.Stream;
 public class FilterPalindrom {
 	public static void main(String[] args) {
 		List<String> str = List.of("hello", "radar", "telephone", "world", "deed");
-		List<String> palindromWords = str.stream().filter(s -> s.equals(new StringBuilder(s).reverse().toString()))
+		List<String> palindromWords = str.stream()
+                .filter(s -> s.equals(new StringBuilder(s).reverse().toString()))
 				.collect(Collectors.toList());
 		System.out.println(palindromWords);
 	}
