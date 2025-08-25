@@ -8,7 +8,9 @@ import java.util.stream.Collectors;
 public class FrequencyWord {
 public static void main(String[] args) {
 	String sentence="Java is programing language Java is Vesatile";
-	Map<String,Long> frequencyWord=Arrays.stream(sentence.split("\\s+")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+	Map<String,Long> frequencyWord=Arrays.stream(sentence.split("\\s+")).collect(Collectors.groupingBy(
+		Function.identity(), // group by the word itself
+		Collectors.counting())); // count occurrences
 	System.out.println(frequencyWord);
 	
 }
