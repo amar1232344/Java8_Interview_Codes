@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class GroupWordsByLength {
+    public static void main(String[] args) {
+        List<String> words= Arrays.asList("java","spring","quarkus","api","boot","microservices");
+        Map<Integer,List<String>> grouped=words.stream()
+                .collect(Collectors.groupingBy(String::length));
+
+        System.out.println(grouped);
+        // Output: {3=[api], 4=[java, boot], 6=[spring], 7=[quarkus], 13=[microservices]}
+
+    }
+}
